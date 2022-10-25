@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 11 P3</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+            background: crimson;
+            color: aqua;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <p>Valocidade do Carro: <input type="number" id="velocidadetxt"> Km/h</p>
+    <input type="button" value="Verificar!" onclick="calcular()">
+    <div id="resultado">
+        
+    </div>
+    <script>
+        function calcular() {
+            var velocidadetxt = window.document.getElementById('velocidadetxt')
+            var resultado = window.document.getElementById('resultado')
+            var velocidade = Number(velocidadetxt.value)
+
+            if (velocidade > 60) {
+                resultado.innerHTML = `<p>Você ultrapassou o limite de velocidade! Você foi MULTADO! </p>`
+            }else{
+                resultado.innerHTML = `<p>Sua velocidade atual é de <strong>${velocidade}</strong> Km/h</p>`
+            }
+        }
+    </script>
+</body>
+</html>
